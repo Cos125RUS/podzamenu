@@ -1,0 +1,42 @@
+[
+    {
+        "brand": "JD",
+        "article": "JSA344223",
+        "name": "Амортизатор /gas/ FR",
+        "quantity": ">10",
+        "price": 80594,
+        "delivery_duration": 1296000,
+        "vendorId": "00f1bd04-910d-44e8-aedf-10ad4822559d",
+        "warehouseAlias": "ТИ084"
+    },
+    {
+        "brand": "JD",
+        "article": "JSA344223",
+        "name": "Амортизатор /gas/ FR",
+        "quantity": ">5",
+        "price": 81562,
+        "delivery_duration": 518400,
+        "vendorId": "dbdb9d1c-faee-4d56-b3cd-7266f1ce13d5",
+        "warehouseAlias": "ТИ085"
+    },
+    {
+        "brand": "TOKICO",
+        "article": "E3561",
+        "name": "Стойка амортизационная газовая, задняя",
+        "quantity": "5",
+        "price": 170404,
+        "delivery_duration": 691200,
+        "vendorId": "e4439ef9-60ca-4072-9b4f-eeefa937afc9",
+        "warehouseAlias": "ТИ053"
+    },
+    {
+        "brand": "TOKICO",
+        "article": "E3561",
+        "name": "Стойка амортизационная газовая, задняя",
+        "quantity": ">5",
+        "price": 168113,
+        "delivery_duration": 604800,
+        "vendorId": "2be1edb4-8e8f-485d-a817-2dd03df70b62",
+        "warehouseAlias": "ТИ065"
+    }
+]

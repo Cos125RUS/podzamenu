@@ -1,0 +1,78 @@
+[
+    {
+        "brand": "JD",
+        "brand_alt": "",
+        "article": "JSA344223",
+        "article_alt": "",
+        "analog": 0,
+        "article_name": "Амортизатор /gas/ FR",
+        "min_price": 805.94,
+        "applicability": "",
+        "warehouse_offers": [
+            {
+                "id": "00f1bd04-910d-44e8-aedf-10ad4822559d",
+                "price": 805.94,
+                "quantity": ">10",
+                "min_part": 1,
+                "delivery_period": 15,
+                "warehouse_code": "ТИ084",
+                "warehouse_name": "Москва",
+                "is_main_warehouse": 0,
+                "branch_name": "Москва",
+                "branch_code": "00003",
+                "name": "Амортизатор /gas/ FR"
+            },
+            {
+                "id": "dbdb9d1c-faee-4d56-b3cd-7266f1ce13d5",
+                "price": 815.62,
+                "quantity": ">5",
+                "min_part": 1,
+                "delivery_period": 6,
+                "warehouse_code": "ТИ085",
+                "warehouse_name": "Иркутск",
+                "is_main_warehouse": 0,
+                "branch_name": "Иркутск",
+                "branch_code": "ТИ002",
+                "name": "Амортизатор /gas/ FR"
+            }
+        ]
+    },
+    {
+        "brand": "TOKICO",
+        "brand_alt": "",
+        "article": "E3561",
+        "article_alt": "",
+        "analog": 0,
+        "article_name": "Стойка амортизационная газовая, задняя",
+        "min_price": 1681.13,
+        "applicability": "",
+        "warehouse_offers": [
+            {
+                "id": "e4439ef9-60ca-4072-9b4f-eeefa937afc9",
+                "price": 1704.04,
+                "quantity": "5",
+                "min_part": 1,
+                "delivery_period": 8,
+                "warehouse_code": "ТИ053",
+                "warehouse_name": "Екатеринбург",
+                "is_main_warehouse": 0,
+                "branch_name": "Екатеринбург",
+                "branch_code": "ТИ003",
+                "name": "Стойка амортизационная газовая, задняя"
+            },
+            {
+                "id": "2be1edb4-8e8f-485d-a817-2dd03df70b62",
+                "price": 1681.13,
+                "quantity": ">5",
+                "min_part": 1,
+                "delivery_period": 7,
+                "warehouse_code": "ТИ065",
+                "warehouse_name": "Омск",
+                "is_main_warehouse": 0,
+                "branch_name": "Омск",
+                "branch_code": "ТИ007",
+                "name": "Стойка амортизационная газовая, задняя"
+            }
+        ]
+    }
+]
