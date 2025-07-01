@@ -27,12 +27,25 @@ class ProductService implements IProductService
     /**
      * @param string $article артикль продукта
      * @param string $apiKey API-ключ от http://api.tmparts.ru/
-     * @return array список найденных брендов
+     * @return array список найденных товаров
      * @throws ClientExceptionInterface|RedirectionExceptionInterface|ServerExceptionInterface|TransportExceptionInterfaceAlias ошибка запроса к api
      */
     function getProductListByArticle(string $article, string $apiKey): array
     {
-        //Отправка запроса на получение списка брендов
+        //Получение списка товаров
+        $produceList = $this->apiRequest($article, $apiKey);
+
+        //Заполнение результирующего списка
+        return $this->getResultList($produceList);
+    }
+
+    /**
+     * Отправка запроса к API
+     * @throws ClientExceptionInterface|RedirectionExceptionInterface|ServerExceptionInterface|TransportExceptionInterfaceAlias ошибка запроса к api
+     */
+    private function apiRequest(string $article, string $apiKey): array
+    {
+        //Отправка запроса на получение списка товаров
         $response = $this->client->request('GET',
             ProductService::API_PATH . ProductService::STOCK_BY_ARTICLE_PATH,
             [
@@ -48,8 +61,16 @@ class ProductService implements IProductService
         );
 
         //Получение списка товаров
-        $produceList = json_decode($response->getContent());
+        return json_decode($response->getContent());
+    }
 
+    /**
+     * Формирование результирующего списка
+     * @param array $produceList список товаров, полученный от API
+     * @return array
+     */
+    private function getResultList(array $produceList): array
+    {
         //Заполнение результирующего списка
         $resultList = [];
         foreach ($produceList as $product) {
