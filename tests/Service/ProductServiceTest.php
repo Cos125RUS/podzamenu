@@ -41,6 +41,7 @@ class ProductServiceTest extends TestCase
         $productService = new ProductService($mockHttpClient);
 
         $result = $productService->getProductListByArticle($testArticle, $testApiKey);
+        $result = json_decode(json_encode($result), true);
 
         $this->assertEquals($expectedResponse, $result);
         $requestOptions = $mockResponse->getRequestOptions();

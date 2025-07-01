@@ -2,6 +2,7 @@
 
 namespace App\Service;
 
+use App\Model\ProductDTO;
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
@@ -74,17 +75,11 @@ class ProductService implements IProductService
         //Заполнение результирующего списка
         $resultList = [];
         foreach ($produceList as $product) {
+            $brand = $product->brand;
+            $article = $product->article;
+
             foreach ($product->warehouse_offers as $warehouseOffer) {
-                $resultList[] = [
-                    'brand' => $product->brand,
-                    'article' => $product->article,
-                    'name' => $warehouseOffer->name,
-                    'quantity' => $warehouseOffer->quantity,
-                    'price' => 100 * $warehouseOffer->price,
-                    'delivery_duration' => 24 * 60 * 60 * $warehouseOffer->delivery_period,
-                    'vendorId' => $warehouseOffer->id,
-                    'warehouseAlias' => $warehouseOffer->warehouse_code,
-                ];
+                $resultList[] = new ProductDTO($brand, $article, $warehouseOffer);
             }
         }
 
